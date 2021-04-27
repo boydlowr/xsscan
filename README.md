@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> A lightweight, fast tool for testing GET parameters for Reflected Cross Site Scripting exploits.
+> A lightweight, fast, tool for testing GET parameters for reflected XSS exploits.
 
 ## Images
 
