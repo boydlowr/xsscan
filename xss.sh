@@ -45,7 +45,7 @@ function exploit {
 	fi
 
 	# Display results
-	echo "	[!] Chance of XSS: $chance"
+	echo "	[!] Chance of XSS: $chance/7"
 	echo ""
 
 	# Cleanup files
