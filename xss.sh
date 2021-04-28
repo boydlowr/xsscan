@@ -29,7 +29,7 @@ function exploit {
 	if [[ "$response" =~ .*"PAYLOAD_START".* ]]
 	then
 
-		echo "	[-] String is reflected"
+		echo -e  "	[-] String is reflected"
 		
 		text=$(echo $response | awk -F'PAYLOAD_START' '{ print $2 }')
 		text=$(echo $text | awk -F'PAYLOAD_END' '{ print $1 }')
@@ -45,7 +45,7 @@ function exploit {
 	fi
 
 	# Display results
-	echo "	[!] Chance of XSS: $chance/7"
+	echo -e  "	[!] Chance of XSS: \e[1m$chance/7"
 	echo ""
 
 	# Cleanup files
@@ -57,7 +57,7 @@ counter=1
 while : ; do
 	query=$(echo $queryStrings | awk -F'&' "{ print \$$counter }")
 	
-	echo "Testing query: $query"
+	echo -e "\e[0;92mTesting query: \e[1m$query\e[0m"
 	exploit $1 $query
 
 	counter=$((counter+1))
